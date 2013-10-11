@@ -1,0 +1,7 @@
+#!/usr/bin/env ruby
+
+$:.push File.expand_path("../../lib", __FILE__)
+require "phantomjs_binaries/version"
+
+platform_binary = File.expand_path(File.join(File.dirname(__FILE__), "phantomjs-1.9.2-linux-x86_64"))
+exec platform_binary, *ARGV
